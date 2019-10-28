@@ -16,6 +16,8 @@ provider "google" {
 # Set up a backend to be proxied to:
 # A single instance in a pool running nginx with port 80 open will allow end to end network testing
 resource "google_compute_instance" "cluster1" {
+  
+# Machine name
   name         = "armor-gce-${random_id.instance_id.hex}"
   machine_type = "f1-micro"
 
